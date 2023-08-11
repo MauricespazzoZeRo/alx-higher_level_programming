@@ -1,0 +1,21 @@
+#include "lists.h"
+
+int check_cycle(listint_t *list)
+{
+	char *hare, *tortoise;
+
+	tortoise = head;
+	hare = head.next;
+
+	while(hare && hare->next)
+	{
+		if (tortoise == hare)
+		{
+			return (1);
+		}
+
+		tortoise = tortoise->next;
+		hare = hare->next->next;
+	}
+	return (0);
+}

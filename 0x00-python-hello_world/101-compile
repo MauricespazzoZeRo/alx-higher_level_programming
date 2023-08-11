@@ -1,0 +1,28 @@
+#!/usr/bin/bash
+# Get the Python script filename from the environment variable
+pyfile="$PYFILE"
+
+# Check if the environment variable is set
+if [ -z "$pyfile" ]; then
+	echo "Error: Environment variable \$PYFILE is not set."
+	exit 1
+fi
+
+# Check if the specified Python script exists
+if [ ! -f "$pyfile" ]; then
+	echo "Error: Python script '$pyfile' does not exist."
+	exit 1
+fi
+
+# Compile the Python script into a .pyc file
+echo "Compiling $pyfile ..."
+python3 -m py_compile "$pyfile"
+
+# Output filename for the compiled .pyc file
+pycfile="${pyfile}c"
+
+# Move the compiled .pyc file to the correct location
+mv "__pycache__/${pyfile%.*}.cpython-38.pyc" "$pycfile"
+
+# Remove the __pycache__ directory
+rm -r -f "__pycache__"
