@@ -49,6 +49,3 @@ def div(a, b):
 	The return value. a / b
     """
     return int(a / b)
-
-if __name__ == "__main__":
-    main()
