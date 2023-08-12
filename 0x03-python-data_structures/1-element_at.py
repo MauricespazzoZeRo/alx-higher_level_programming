@@ -9,7 +9,7 @@ def element_at(my_list, idx):
         my_list (list): List with elements.
         idx: Index for elements in list.
     """
-    if idx < 0 or idx > len(my_list):
-        return None
+    if idx < 0 or idx >= len(my_list):
+        return (None)
 
-    return my_list[idx]
+    return (my_list[idx])
