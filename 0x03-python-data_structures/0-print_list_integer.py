@@ -5,5 +5,7 @@ def print_list_integer(my_list=[]):
     """
     prints a list of given integers
     """
-    for i in my_list:
+    new_list = my_list.copy
+    new_list.reverse()
+    for i in len(new_list):
         print("{:d}".format(i))
