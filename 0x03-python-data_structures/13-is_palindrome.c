@@ -40,7 +40,7 @@ int is_palindrome(listint_t **head)
 {
 	if (!*head || (*head)->next)
 	{
-		return (0); /* Is palindrome */
+		return (1); /* Is palindrome */
 	}
 
 	/* Find the middle of the linked list using the hare and tortoise approach */
@@ -64,11 +64,11 @@ int is_palindrome(listint_t **head)
 	{
 		if (current_1->n != current_2->n)
 		{
-			return (1); /* Not palindrome */
+			return (0); /* Not palindrome */
 		}
 		current_1 = current_1->next;
 		current_2 = current_2->next;
 	}
 
-	return (0);
+	return (1);
 }
