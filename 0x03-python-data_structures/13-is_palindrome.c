@@ -30,6 +30,11 @@ listint_t *reverse_listint(listint_t **head)
 	return (*head);
 }
 
+/**
+ * is_palindrome - Checks if a singly linked list is a palindrome.
+ * @head: Pointer to pointer to the head of the linked list.
+ * Return: 1 if the list is a palindrome, 0 otherwise.
+ */
 
 int is_palindrome(listint_t **head)
 {
