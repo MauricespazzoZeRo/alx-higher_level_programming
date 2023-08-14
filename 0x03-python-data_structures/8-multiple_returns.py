@@ -2,10 +2,9 @@
 
 
 def multiple_returns(sentence):
-    if sentence == "":
-        sentence[0] = None
+    if len(sentence) == 0:
+        first_char = None
     else:
-        str_len = len(sentence)
         first_char = sentence[0]
-        tup = (str_len, first_char)
+        tup = (len(sentence), first_char)
         return (tup)
