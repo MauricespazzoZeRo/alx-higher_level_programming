@@ -42,7 +42,7 @@ int is_palindrome(listint_t **head)
 	listint_t *tortoise = *head;
 	listint_t *hare = *head;
 
-	while(hare->next && hare->next->next)
+	while (hare->next && hare->next->next)
 	{
 		tortoise = tortoise->next;
 		hare = hare->next->next;
@@ -54,7 +54,8 @@ int is_palindrome(listint_t **head)
 	/* Compare the 1st & 2nd halves for palindromicity */
 	listint_t *current_1 = *head;
 	listint_t *current_2 = scnd_half_head;
-	while(current_2)
+
+	while (current_2)
 	{
 		if (current_1->n != current_2->n)
 		{
