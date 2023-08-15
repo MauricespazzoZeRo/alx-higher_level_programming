@@ -38,15 +38,19 @@ listint_t *reverse_listint(listint_t **head)
 
 int is_palindrome(listint_t **head)
 {
+	listint_t *tortoise;
+	listint_t *hare;
+	listint_t *scnd_half_head;
+	listint_t *current_1;
+	listint_t *current_2;
+
 	if (!head || !*head || (*head)->next)
 	{
 		return (1); /* Is palindrome */
 	}
 
-	/* Find the middle of the linked list using the hare and tortoise approach */
-	listint_t *tortoise = *head;
-	listint_t *hare = *head;
-
+	tortoise = *head;
+	hare = *head;
 	while (hare->next && hare->next->next)
 	{
 		tortoise = tortoise->next;
@@ -54,11 +58,11 @@ int is_palindrome(listint_t **head)
 	}
 
 	/*Reverse the second half of the linked_list */
-	listint_t *scnd_half_head = reverse_listint(&tortoise);
+	scnd_half_head = reverse_listint(&tortoise);
 
 	/* Compare the 1st & 2nd halves for palindromicity */
-	listint_t *current_1 = *head;
-	listint_t *current_2 = scnd_half_head;
+	current_1 = *head;
+	current_2 = scnd_half_head;
 
 	while (current_2)
 	{
