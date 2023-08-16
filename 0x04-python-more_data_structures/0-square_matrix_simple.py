@@ -8,6 +8,6 @@ def square_matrix_simple(matrix=[]):
         for idx in row:
             new_row.append(idx ** 2)
 
-        new_matrix.apprend(new_row)
+        new_matrix.append(new_row)
 
     return (result_matrix)
