@@ -1,1 +1,1 @@
-This repository contains files on Higher level programming in Python.
+This directory contains files in C and python relating to doubly-linked lists
