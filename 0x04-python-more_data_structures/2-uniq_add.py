@@ -6,8 +6,8 @@ def uniq_add(my_list=[]):
     total = 0
 
     for element in my_list:
-            if element not in first_occ:
-                first_occ[element] = True
-                total += element
+        if element not in first_occ:
+            first_occ[element] = True
+            total += element
 
     return (total)
