@@ -4,12 +4,12 @@
 class Square:
     """
     class square that has attributes:
-	size
+    size
     some attributes are protected from input.
     """
     def __init__(self, size=0, position=(0, 0)):
 	"""
-	initialization function for our square clasee
+	initialization function for our square class
 	"""
 	if self.__validate_size(size):
 	    self.__size = size
