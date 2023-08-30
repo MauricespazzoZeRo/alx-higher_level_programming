@@ -11,8 +11,8 @@ class Node:
         """
         if self.__validate_data(data):
             self.__data = data
-            if self.__validate_node(next_node):
-                self.__next_node = next_node
+        if self.__validate_node(next_node):
+            self.__next_node = next_node
 
     @property
     def data(self):
@@ -60,7 +60,7 @@ class Node:
         """
         if isinstance(node, Node) or node is None:
             return True
-	return False
+        return False
 
 
 class SinglyLinkedList:
@@ -85,19 +85,19 @@ class SinglyLinkedList:
             tmp = tmp.next_node
             if tmp is not None:
                 string += '\n'
-                return string
+        return string
 
     def sorted_insert(self, value):
         """
         inserts a new Node into the correct sorted position
-        (based on data)
+                                            (based on data)
         """
         tmp = self.__head
         if tmp is None:
             self.__head = Node(value)
             return
 
-	prev = None
+        prev = None
         while tmp is not None:
             if (tmp.next_node is None or tmp.next_node.data >= value):
                 if (tmp.data >= value):
@@ -112,7 +112,7 @@ class SinglyLinkedList:
                     next_n = tmp.next_node
                     tmp.next_node = Node(value)
                     tmp.next_node.next_node = next_n
-                    return
+                return
 
-                prev = tmp
-                tmp = tmp.next_node
+            prev = tmp
+            tmp = tmp.next_node
