@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+My print square function
+"""
 
 
 def print_square(size):

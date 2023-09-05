@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+My add function
+"""
 
 
 def add_integer(a, b=98):
