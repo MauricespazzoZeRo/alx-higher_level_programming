@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+My rectangle module
+"""
 
 class Rectangle():
     """rectangle class for storing rectangle data
