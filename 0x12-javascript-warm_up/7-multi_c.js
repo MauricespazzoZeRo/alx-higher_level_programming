@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+// Script that prints 'C is fun' "x times"
+
+const numArgs = process.argv.length - 2;
+
+if (numArgs === 0)
+{
+	console.log("Missing number of occurances");
+}
+// If at least one argument is passed
+else
+{
+	const input = process.argv[2];
+	const integerValue = parseInt(input);
+
+	// Check if the conversion is successful and the result is a number
+	if (!isNaN(integerValue))
+	{
+		const Msg = 'C is fun';
+
+		for (let i = 0; i < integerValue; i++)
+		{
+			console.log(Msg);
+		}
+	}
+}
