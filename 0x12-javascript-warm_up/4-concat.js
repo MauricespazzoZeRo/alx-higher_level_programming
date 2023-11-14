@@ -1,22 +1,24 @@
 #!/usr/bin/env node
-// This script prints the 2 arguments passed to it
+// This script prints two arguments in the format " is "
 
 // Check the number of arguments
 const numArgs = process.argv.length - 2;
 
-// If no arguments are passed
-if (numArgs === 0)
+// If exactly two arguments are passed
+if (numArgs === 2)
 {
-	console.log("No argument");
+  const argument1 = process.argv[2];
+  const argument2 = process.argv[3];
+  console.log(argument1, "is", argument2);
 }
+// If fewer than two arguments are passed
 else if (numArgs === 1)
 {
-	
+	const argument1 = process.argv[2]
+	const argument2 = 'undefined';
+	console.log(argument1, "is", argument2);
 }
-// If at least one argument is passed
 else
 {
-	// Use slice to get only the arguments (excluding path and executable)
-	const argsList = process.argv.slice(2).join(" is ");
-	console.log(argsList);
+  console.log("undefined is undefined");
 }
