@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+// File: 0-rectangle.js
+class Rectangle
+{
+  // Empty class definition
+}
+
+module.exports = 0-rectangle.js; // Export the Rectangle class
