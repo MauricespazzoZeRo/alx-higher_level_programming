@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 // File: 0-rectangle.js
-class Rectangle
-{
+class Rectangle {
   // Empty class definition
 }
 
