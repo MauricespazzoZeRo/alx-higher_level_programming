@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 exports.nbOccurrences = function (list, searchElement) {
   // Use the reduce function to iterate over the elements in the list and accumulate the count
   return list.reduce((count, element) => {
